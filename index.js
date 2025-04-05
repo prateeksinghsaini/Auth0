@@ -43,13 +43,13 @@ const sendEmailToken = async (toEmail, token) => {
 
     const mailOptions = {
       from: 'prateek1901267@gmail.com',
-      to: toEmail,
+      to: "hr@vocso",
       subject: 'Your Login Token',
       text: `Click the link to login: http://localhost:5173/auth/callback?token=${token}`,
     };
 
     await transporter.sendMail(mailOptions);
-    console.log('Email sent to:', toEmail);
+    console.log('Email sent to: hr@vocso');
   } catch (error) {
     console.error('Error sending email:', error);
     throw error;
